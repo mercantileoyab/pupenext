@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201201120906) do
+ActiveRecord::Schema.define(version: 20210602122306) do
 
   create_table "abc_aputaulu", primary_key: "tunnus", force: :cascade do |t|
     t.string   "yhtio",              limit: 5,                            default: "",  null: false
@@ -1404,6 +1404,7 @@ ActiveRecord::Schema.define(version: 20201201120906) do
     t.integer  "label",                            limit: 4,                              default: 0,          null: false
     t.integer  "tunnusnippu",                      limit: 4,                              default: 0,          null: false
     t.integer  "vanhatunnus",                      limit: 4,                              default: 0,          null: false
+    t.string   "saapumisnumero",                   limit: 255,                            default: "",         null: false
   end
 
   add_index "lasku", ["nimi"], name: "asiakasnimi", type: :fulltext
