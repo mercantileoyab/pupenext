@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201201120906) do
+ActiveRecord::Schema.define(version: 20210619102138) do
 
   create_table "abc_aputaulu", primary_key: "tunnus", force: :cascade do |t|
     t.string   "yhtio",              limit: 5,                            default: "",  null: false
@@ -1304,6 +1304,7 @@ ActiveRecord::Schema.define(version: 20201201120906) do
     t.string   "ohjausmerkki",                     limit: 70,                             default: "",         null: false
     t.string   "tilausyhteyshenkilo",              limit: 50,                             default: "",         null: false
     t.string   "asiakkaan_tilausnumero",           limit: 50,                             default: "",         null: false
+    t.string   "saapumisnumero",                   limit: 255,                            default: "",         null: false
     t.string   "kohde",                            limit: 50,                             default: "",         null: false
     t.integer  "myyja",                            limit: 4,                              default: 0,          null: false
     t.integer  "allekirjoittaja",                  limit: 4,                              default: 0,          null: false
@@ -3047,6 +3048,7 @@ ActiveRecord::Schema.define(version: 20201201120906) do
     t.string   "toim_nimitys",            limit: 100,                          default: "",   null: false
     t.string   "toim_yksikko",            limit: 10,                           default: "",   null: false
     t.decimal  "tuotekerroin",                        precision: 9,  scale: 6, default: 0.0,  null: false
+    t.decimal  "myyntihinta_kerroin",                 precision: 16, scale: 6, default: 0.0
     t.string   "viivakoodi",              limit: 150,                          default: "",   null: false
     t.string   "alkuperamaa",             limit: 2,                            default: "",   null: false
     t.integer  "jarjestys",               limit: 4,                            default: 0,    null: false
