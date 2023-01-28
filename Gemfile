@@ -6,7 +6,7 @@ gem 'rails', '~> 4.2'
 gem 'bcrypt'
 gem 'jquery-rails'
 gem 'coffee-rails'
-gem 'mysql2', '~> 0.3.18'
+gem 'mysql2', '< 0.5'
 gem 'turbolinks'
 gem 'dotenv-rails'
 
@@ -27,6 +27,11 @@ gem 'pdfkit'
 gem 'lightbox2-rails'
 gem 'wicked_pdf'
 gem 'whenever', require: false
+gem 'will_paginate'
+gem 'prawn'
+gem 'prawn-rails'
+gem 'mail', '~> 2.6.0'
+gem 'woocommerce_api'
 
 group :assets do
   gem 'uglifier'
@@ -43,6 +48,7 @@ end
 group :test, :development do
   gem 'rake'
   gem 'minitest'
+  gem 'simplecov'
   gem 'codeclimate-test-reporter'
   gem 'i18n-tasks'
   gem 'localeapp'
@@ -53,3 +59,4 @@ group :test do
   gem 'fakeredis'
   gem 'mocha'
 end
+
