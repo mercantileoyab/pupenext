@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20221003200343) do
+ActiveRecord::Schema.define(version: 20230612081913) do
 
   create_table "abc_aputaulu", primary_key: "tunnus", force: :cascade do |t|
     t.string   "yhtio",              limit: 5,                            default: "",  null: false
@@ -3315,6 +3315,7 @@ ActiveRecord::Schema.define(version: 20221003200343) do
     t.string   "printteri7",                       limit: 20,                           default: "",  null: false
     t.string   "printteri9",                       limit: 20,                           default: "",  null: false
     t.string   "printteri10",                      limit: 20,                           default: "",  null: false
+    t.string   "printteri11",                      limit: 20,                           default: "",  null: false
     t.string   "nimitys",                          limit: 100,                          default: "",  null: false
     t.string   "tyyppi",                           limit: 1,                            default: "",  null: false
     t.integer  "nouto",                            limit: 4,                            default: 0,   null: false
@@ -3569,6 +3570,7 @@ ActiveRecord::Schema.define(version: 20221003200343) do
     t.string   "myyntitilin_tulostustapa",                         limit: 1,                              default: "",    null: false
     t.string   "valmistuksen_tulostustapa",                        limit: 1,                              default: "",    null: false
     t.string   "siirtolistan_tulostustapa",                        limit: 1,                              default: "",    null: false
+    t.string   "noutotilausten_tulostus",                          limit: 255,                            default: "",    null: false
     t.string   "lahetteen_jarjestys",                              limit: 1,                              default: "",    null: false
     t.string   "lahetteen_jarjestys_suunta",                       limit: 4,                              default: "",    null: false
     t.string   "lahetteen_palvelutjatuottet",                      limit: 1,                              default: "",    null: false
